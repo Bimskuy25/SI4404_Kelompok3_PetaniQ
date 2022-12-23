@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&display=swap');
+
+#about .divider {
+    width: 60px;
+    height: 2px;
+    display: block;
+}
+#detail img {
+    width: 400px;
+    height: 400px;
+}
+
+#konsultasi img{
+    width: 300px;
+    height: 300px;
+}
