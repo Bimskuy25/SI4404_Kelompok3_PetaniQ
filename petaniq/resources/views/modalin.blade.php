@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4" style="color:#238E68">Tani</h2>
                         <div class="text-center mb-4">
-                            <img src="./img/tani.jpg" alt="">
+                            <img src="./frontend/img/tani.jpg" alt="">
                         </div>
                         <h5 class="card-text text-center mb-4" style="color:#238E68">Benefit Paket Tani</h2>
                         <div class="mb-5">
@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4" style="color:#238E68">Mas Tani</h2>
                         <div class="text-center mb-4">
-                            <img src="./img/mastani.jpg" alt="">
+                            <img src="./frontend/img/mastani.jpg" alt="">
                         </div>
                         <h5 class="card-text text-center mb-4" style="color:#238E68">Benefit Paket Mas Tani</h2>
                         <div class="mb-5">
@@ -56,7 +56,7 @@
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4" style="color:#238E68">Pak Tani</h2>
                         <div class="text-center mb-4">
-                            <img src="./img/paktani.jpg" alt="">
+                            <img src="./frontend/img/paktani.jpg" alt="">
                         </div>
                         <h5 class="card-text text-center mb-4" style="color:#238E68">Benefit Paket Pak Tani</h2>
                         <div class="mb-2">
