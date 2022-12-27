@@ -29,15 +29,25 @@
                             <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
                         </li>
                     </ul>
+
                     <div class="btn-group">
+                        @if (Auth::check())
                         <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-                        Nama
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-                        </ul>
+                            {{Auth::user()->name}}
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                {{-- <li><a class="dropdown-item" href="/logout">Logout</a></li> --}}
+                                <li><form method="POST" action="{{ route('logout')}}" >@csrf <button class="btn btn-light dropdown-item" type="submit">Logout</button></form></li>
+                            </ul>
+                        @else
+                        <button type="button" onclick="window.location='/login'" class="btn btn-light" data-bs-toggle="dropdown">
+                            Login
+                            </button>
+
+                        @endif
                     </div>
+
                 </div>
             </div>
         </nav>

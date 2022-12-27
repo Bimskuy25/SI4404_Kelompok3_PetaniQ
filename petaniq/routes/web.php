@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RoleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+// Route::get('/login',function () {
+//     return view('login');
+// });
+
+// For Authenticate
+Route::get('/login', 'App\Http\Controllers\RoleController@showLoginForm')->name('login');
+Route::post('/login', 'App\Http\Controllers\RoleController@login');
+Route::post('/logout', 'App\Http\Controllers\RoleController@logout')->name('logout');
+
+Route::get('/register', 'App\Http\Controllers\RoleController@showRegisterForm')->name('register');
+Route::post('/register', 'App\Http\Controllers\RoleController@register');
+
+// Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/belipanen', function () {
     return view('belipanen');
@@ -53,7 +75,5 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+
 
