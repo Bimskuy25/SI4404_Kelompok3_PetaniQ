@@ -12,7 +12,7 @@
                     <img src="./frontend/img/rice.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Beras Enak</h5>
-                        <p class="card-text">Pak Broto</p>
+                        <p class="card-text">Pak Ahmad</p>
                         <div class=" container row justify-content-center">
                             <a href="detail.html" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
                         </div>
