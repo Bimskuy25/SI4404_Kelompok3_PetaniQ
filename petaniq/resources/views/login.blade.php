@@ -18,9 +18,9 @@
                   <h1 style="color:#238E68">Login</h1>
                 </div>
 
-                <div class="divider d-flex align-items-center my-4">
+                {{-- <div class="divider d-flex align-items-center my-4">
                   <p class="text-center fw-bold mx-3 mb-0">^w^</p>
-                </div>
+                </div> --}}
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
