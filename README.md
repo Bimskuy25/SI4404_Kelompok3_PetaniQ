@@ -1,1 +1,3 @@
-# SI4404_Kelompok2_PetaniQ
+# SI4404_Kelompok3_PetaniQ
+
+# Our Team
