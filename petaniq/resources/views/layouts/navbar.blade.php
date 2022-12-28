@@ -10,6 +10,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
+                        @if (Auth::check())
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/">Home</a>
                         </li>
@@ -28,6 +29,17 @@
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
                         </li>
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="#location">Location</a>
+                        </li>
+                        @endif
                     </ul>
 
                     <div class="btn-group">
