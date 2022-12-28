@@ -4,7 +4,7 @@
 
 <section id='detail'>
     <div class="container col-10 mb-5 mt-4">
-        <h1 class="detail" style="color:#238E68">Detail Produk</h1>
+        <h1 class="detail mb-4" style="color:#238E68; font-weight:700">Detail Produk</h1>
         <div class="d-flex justify-content-center align-items-start gap-5 mt-3">
             <div class="container">
                 <div class="row g-2">
@@ -24,11 +24,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="deskripsi" class="form-label" style="font-weight:bold;">Deskripsi</label>
-                                <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" rows="5"></textarea>
+                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="penjual" class="form-label" style="font-weight:bold;">Quantity</label>
-                                <input type="number" class="form-control form-control-md" id="penjual" name="penjual" placeholder="Masukkan Nama Pemilik">
+                                <input type="number" class="form-control form-control-md" id="penjual" name="penjual">
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <input class="btn text-white" type="submit" value="Beli Hasil Panen" style="background-color: #238E68;">
