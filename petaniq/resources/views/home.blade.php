@@ -32,7 +32,7 @@
         </div>
 
         {{-- About --}}
-        <div class="container mb-5">
+        <div class="container mb-5 page-section p-5">
             <div class="row justify-content-center">
                 <h1 id="about" class="text-center mt-5 mb-5">Tentang Kami</h1>
                 <div class="col-10">
@@ -42,7 +42,7 @@
         </div>
 
         {{-- Location --}}
-        <div class="container text-center mb-5">
+        <div class="container text-center mb-5 page-section p-5">
             <div class="row justify-content-md-center">
                 <div class="com-md-auto mt-4">
                     <h1 id='Location' class="mb-5">Lokasi Kami</h1>

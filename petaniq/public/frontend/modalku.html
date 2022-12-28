@@ -29,7 +29,7 @@
                             <a class="nav-link" style="color: white;" href="belipanen.html">Beli Hasil Panen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #FFF96A;" href="jualpanen.html">Jual Hasil Panen</a>
+                            <a class="nav-link" style="color: white;" href="jualpanen.html">Jual Hasil Panen</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="modalin.html">Modalin</a>
@@ -57,63 +57,52 @@
             </div>
         </nav>
 
-    <section id='form'>
-        <div class="container col-9 mb-5 mt-5">
-            <h3 class="panen" style="color:#238E68; font-weight: bold;">Jual Hasil Panen</h3>
-            <p class="panen">Tambahkan jual hasil panen anda</p>
-            <form action="" method="post" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="nama" class="form-label" style="font-weight:bold;">Nama Hasil Panen</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Produk">
+    <section id='beli'>
+        <div class="container col-10 mb-5 mt-5">
+            <h1 class="transaksi-panen text-center" style="color:#238E68; font-weight: bold;">Modalku</h1>
+            <div class="container col-12 mt-4">
+                <div class="card recent-orders overflow-auto">
+                    <div class="filter">
+                        <a class="icon"><i class="bi bi-three-dots"></i></a>
+                    </div>
+                    <div class="card-body pb-0">
+                        <table class="table table-info">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID Modalin</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nama Paket</th>
+                                    <th scope="col">Tanggal Lahir</th>
+                                    <th scope="col">Alamat</th>
+                                    <th scope="col">Jumlah Lahan</th>
+                                    <th scope="col">Status Modalin</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1234</th>
+                                    <td>Maman Rusdi</td>
+                                    <td>Tani</td>
+                                    <td>15/12/1990</td>
+                                    <td>jl.braga...</td>
+                                    <td>2</td>
+                                    <td>Success</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="penjual" class="form-label" style="font-weight:bold;">Nama Penjual</label>
-                    <input type="text" class="form-control" id="penjual" name="penjual" placeholder="Masukkan Nama Penjual">
-                </div>
-                <div class="mb-3">
-                    <label for="harga" class="form-label" style="font-weight:bold;">Harga</label>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Rp</span>
-                        <input type="number" class="form-control" id="harga" aria-describedby="basic-addon1" placeholder="Masukkan Harga">
-                    </div> 
-                </div>
-                <div class="mb-3">
-                    <label for="deskripsi" class="form-label" style="font-weight:bold;">Deskripsi</label>
-                    <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="gambar" class="form-label" style="font-weight:bold;">Foto Hasil Panen</label>
-                    <input class="form-control" type="file" id="gambar" name="gambar">
-                </div>
-                <div class="mb-1">
-                    <label for="status_pembayaran" style="font-weight:bold;">Kategori</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="statuspembayaran" id="beras" value="Beras">
-                    <label class="form-check-label" for="inlineRadio1">Beras</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="statuspembayaran" id="sayur" value="Sayur">
-                    <label class="form-check-label" for="inlineRadio2">Sayur</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="statuspembayaran" id="buah" value="Buah">
-                    <label class="form-check-label" for="inlineRadio2">Buah</label>
-                </div>
-                <div class="mt-4">
-                    <input class="btn text-white" type="submit" value="Tambahkan" style="background-color: #238E68;">
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
         <div class="text-center p-3 text-dark" style="background-color: #238E68;">
             © Copyright 2022 PetaniQ
             <br>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, habitant aliquet proin id volutpat. Est suscipit augue donec laoreet nibh odio volutpat quam.
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

@@ -71,6 +71,10 @@ Route::get('/modaltani', function () {
     return view('modalintani');
 });
 
+Route::get('/modalku', function () {
+    return view('modalku');
+});
+
 Route::get('/profile', function () {
     return view('profile');
 });

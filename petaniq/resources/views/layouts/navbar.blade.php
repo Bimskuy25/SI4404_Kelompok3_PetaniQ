@@ -29,6 +29,9 @@
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="/modalku">Modalku</a>
+                        </li>
                         @else
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/">Home</a>
