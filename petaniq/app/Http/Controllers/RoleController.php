@@ -55,11 +55,11 @@ class RoleController extends Controller
 
     public function register(Request $request)
     {
-
         $validatedData = $request->validate([
             'name' => 'required|max:2555',
             'email' => 'required|unique:users',
             'password' => 'required',
+            'kategori' => 'required'
         ]);
 
         $request->validate(['passwordkonf' => 'required|required_with:password|same:password']);

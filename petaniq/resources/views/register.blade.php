@@ -83,11 +83,11 @@
                     <label for="status_pembayaran">Kategori</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="Petani">
+                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="petani">
                     <label class="form-check-label" for="inlineRadio1">Petani</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="Pembeli">
+                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="pembeli">
                     <label class="form-check-label" for="inlineRadio2">Pembeli</label>
                 </div>
 

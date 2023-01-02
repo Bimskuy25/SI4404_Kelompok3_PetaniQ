@@ -11,27 +11,39 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         @if (Auth::check())
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/belipanen">Beli Hasil Panen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/jualpanen">Jual Hasil Panen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/modalin">Modalin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="/modalku">Modalku</a>
-                        </li>
+                            @if(Auth::user()->kategori == 'petani')
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/jualpanen">Jual Hasil Panen</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/modalin">Modalin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/modalku">Modalku</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
+                                </li>
+                            @endif
+                            @if(Auth::user()->kategori == 'pembeli')
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/belipanen">Beli Hasil Panen</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
+                                </li>
+                            @endif
+
+
                         @else
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/">Home</a>
