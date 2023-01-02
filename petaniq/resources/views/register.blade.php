@@ -78,8 +78,24 @@
                         <strong>{{ $message }}</strong> </span> @enderror
                 </div>
 
+                <!-- Kategory -->
+                <div class="mb-1">
+                    <label for="status_pembayaran">Kategori</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="Petani">
+                    <label class="form-check-label" for="inlineRadio1">Petani</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="kategori" id="kategori" value="Pembeli">
+                    <label class="form-check-label" for="inlineRadio2">Pembeli</label>
+                </div>
+
+                <!-- Register button -->
+                <div class='mt-3'>
                   <button type="submit" class="btn btn-lg text-white"
                     style="padding-left: 2.5rem; padding-right: 2.5rem; background: #238E68;">Register</button>
+                </div>
                   <p class="small fw-bold mt-2 pt-1 mb-0">Sudah Memiliki Akun? <a href="/login"
                       class="link-danger">Login</a></p>
               </form>
