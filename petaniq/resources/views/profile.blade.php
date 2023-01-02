@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="clearfix">
-                        <button href="login.html" type="button" class="btn btn-success float-end">Logout</button>
+                        <a href="login" type="button" class="btn btn-success float-end">Logout</a>
                     </div>
                 </form>
             </div>
