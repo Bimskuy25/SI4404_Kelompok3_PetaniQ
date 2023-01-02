@@ -59,7 +59,8 @@ class RoleController extends Controller
             'name' => 'required|max:2555',
             'email' => 'required|unique:users',
             'password' => 'required',
-            'kategori' => 'required'
+            'kategori' => 'required',
+            'phone' => 'required'
         ]);
 
         $request->validate(['passwordkonf' => 'required|required_with:password|same:password']);
