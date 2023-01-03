@@ -41,6 +41,34 @@ class RoleController extends Controller
         ]);
     }
 
+    // Admin Login
+    public function showAdminLoginForm()
+    {
+        return view('adminlogin');
+    }
+
+    public function Adminlogin(Request $request)
+    {
+        // dd($request->session());
+
+        $this->validate($request, [
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string'],
+        ]);
+
+        $kategori = user::where('email',$request->email)->value('kategori');
+
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials) && $kategori == 'admin') {
+            return redirect()->intended('/dashboard');
+        }
+
+        return redirect()->back()->withErrors([
+            'email' => 'These credentials do not match our records.',
+        ]);
+    }
+
+    //logout
     public function logout()
     {
         Auth::logout();

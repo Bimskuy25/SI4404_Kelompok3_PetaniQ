@@ -34,10 +34,17 @@ Route::get('/login', 'App\Http\Controllers\RoleController@showLoginForm')->name(
 Route::post('/login', 'App\Http\Controllers\RoleController@login');
 Route::post('/logout', 'App\Http\Controllers\RoleController@logout')->name('logout');
 
+Route::get('/adminlogin', 'App\Http\Controllers\RoleController@showAdminLoginForm')->name('adminlogin');
+Route::post('/adminlogin', 'App\Http\Controllers\RoleController@Adminlogin');
+
 Route::get('/register', 'App\Http\Controllers\RoleController@showRegisterForm')->name('register');
 Route::post('/register', 'App\Http\Controllers\RoleController@register');
 
 // Route::post('/login', 'Auth\LoginController@login');
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
 
 Route::get('/belipanen', function () {
     return view('belipanen');
