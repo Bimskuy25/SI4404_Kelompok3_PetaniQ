@@ -12,32 +12,29 @@
                 <h1>Profile</h3>
             </div>
             <div class="mt-4 mb-4">
-                <img src="./img/Profile.png" alt="" class="rounded mx-auto d-block" width="200px">
+                <img src="./frontend/img/Profile.png" alt="" class="rounded mx-auto d-block" width="200px">
             </div>
             <div class="card-body">
                 <form method="POST">
-                    <div class="form-group row">
+                    <div class="form-group row mb-3">
                         <label for="email" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9 col-form-label">
-                            <p>{{Auth::user()->email}}</p>
-                            {{-- <input type="text" class="form-control" id="email" value=""> --}}
+                            <input type="text" class="form-control" id="email" value="{{Auth::user()->email}}" readonly>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3">
                         <label for="nama" class="col-sm-3 col-form-label">Nama</label>
                         <div class="col-sm-9 col-form-label">
-                            <p>{{Auth::user()->name}}</p>
-                            {{-- <input type="text" class="form-control" id="email" value=""> --}}
+                            <input type="text" class="form-control" id="email" value="{{Auth::user()->name}}" readonly>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row mb-3">
                         <label for="nohp" class="col-sm-3 col-form-label">Nomor Handphone</label>
                         <div class="col-sm-9 col-form-label">
-                            <p>{{Auth::user()->phone}}</p>
-                            {{-- <input type="text" class="form-control" id="email" value=""> --}}
+                            <input type="text" class="form-control" id="email" value="{{Auth::user()->phone}}" readonly>
                         </div>
                     </div>
-                    <div class="clearfix">
+                    <div class="clearfix mt-3">
                         <a href="login" type="button" class="btn btn-success float-end">Logout</a>
                     </div>
                 </form>
