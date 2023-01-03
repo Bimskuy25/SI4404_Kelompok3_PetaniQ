@@ -31,8 +31,10 @@ class RoleController extends Controller
             'password' => ['required', 'string'],
         ]);
 
+        $kategori = user::where('email',$request->email)->value('kategori');
+
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials) && $kategori != 'admin' ) {
             return redirect()->intended('');
         }
 
@@ -47,7 +49,7 @@ class RoleController extends Controller
         return view('adminlogin');
     }
 
-    public function Adminlogin(Request $request)
+    public function AdminLogin(Request $request)
     {
         // dd($request->session());
 
