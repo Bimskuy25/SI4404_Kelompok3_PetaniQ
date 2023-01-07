@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class product extends Model
+class transaction extends Model
 {
     use HasFactory;
 
@@ -15,6 +15,4 @@ class product extends Model
      * @var array<int, string>
      */
     protected $guarded = [];
-
-
 }
