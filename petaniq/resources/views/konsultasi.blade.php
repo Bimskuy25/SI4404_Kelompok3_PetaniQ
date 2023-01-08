@@ -14,7 +14,7 @@
             <h4 class="konsultasi" style="font-weight: bold;">Ayo Konsultasikan pertanianmu</h4>
         </div>
         <div class="text-center">
-            <input class="btn btn-lg text-white" type="submit" value="Konsultasi" style="padding-left: 4rem; padding-right: 4rem; background-color: #238E68;">
+            <a class="btn btn-lg text-white" role="button" aria-pressed="true" style="padding-left: 4rem; padding-right: 4rem; background-color: #238E68;" href="https://wa.me/6281232463681" target="_blank">Konsultasi</a>
         </div>
     </div>
 </section>

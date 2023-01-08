@@ -15,7 +15,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        return view('transaksi');
     }
 
     /**
@@ -25,7 +25,7 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        //
+        return view('bayar');
     }
 
     /**
@@ -36,7 +36,20 @@ class TransactionController extends Controller
      */
     public function store(StoretransactionRequest $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_product' => 'required|max:2555',
+            'user_id' => 'required',
+            'product_id' => 'required',
+            'jumlah_pesanan' => 'required',
+        ]);
+
+        $path = $request->foto_product->store('gambar','public');
+        $validatedData['foto_product'] = $path;
+
+        Product::create($validatedData);
+
+        // Redirect to home page or show success message
+        return redirect()->route('product.create');
     }
 
     /**

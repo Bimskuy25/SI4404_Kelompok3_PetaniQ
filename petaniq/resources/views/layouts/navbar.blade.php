@@ -16,7 +16,7 @@
                                     <a class="nav-link" style="color: white;" href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/jualpanen">Jual Hasil Panen</a>
+                                    <a class="nav-link" style="color: white;" href="/product/create">Jual Hasil Panen</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/modalin">Modalin</a>

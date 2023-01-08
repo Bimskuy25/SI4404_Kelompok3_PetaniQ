@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\product;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreproductRequest;
 use App\Http\Requests\UpdateproductRequest;
 
@@ -27,22 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $validatedData = $request->validate([
-            'nama_product' => 'required|max:2555',
-            'user_id' => 'required',
-            'harga' => 'required',
-            'deskripsi' => 'required',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'status_pembayaran' => 'required',
-        ]);
-
-        $path = $request->gambar->store('gambar');
-        $validatedData['gambar'] = $path;
-
-        Product::create($validatedData);
-
-        // Redirect to home page or show success message
-        // return redirect()->route('login')->with('success', 'You have successfully registered');
+        return view('jualpanen');
     }
 
     /**
@@ -53,7 +39,22 @@ class ProductController extends Controller
      */
     public function store(StoreproductRequest $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_product' => 'required|max:2555',
+            'user_id' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+            'foto_product' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'kategori' => 'required',
+        ]);
+
+        $path = $request->foto_product->store('gambar','public');
+        $validatedData['foto_product'] = $path;
+
+        Product::create($validatedData);
+
+        // Redirect to home page or show success message
+        return redirect()->route('product.create');
     }
 
     /**
@@ -64,7 +65,7 @@ class ProductController extends Controller
      */
     public function show(product $product)
     {
-        //
+        return view('detail',compact('product'));
     }
 
     /**

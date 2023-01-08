@@ -43,6 +43,8 @@ Route::post('/register', 'App\Http\Controllers\RoleController@register');
 
 Route::resource('/product', 'App\Http\Controllers\ProductController');
 
+Route::resource('/transaction', 'App\Http\Controllers\TransactionController');
+
 // Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/dashboard', function () {
@@ -53,9 +55,9 @@ Route::get('/dashboard', function () {
 //     return view('belipanen');
 // });
 
-Route::get('/jualpanen', function () {
-    return view('jualpanen');
-});
+// Route::get('/jualpanen', function () {
+//     return view('jualpanen');
+// });
 
 Route::get('/modalin', function () {
     return view('modalin');

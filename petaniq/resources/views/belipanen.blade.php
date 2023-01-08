@@ -10,12 +10,17 @@
             @foreach($product as $p)
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="./frontend/img/rice.jpg" class="card-img-top" alt="...">
+                    @if($p->id == '101' || $p->id == '102' || $p->id == '103')
+                    <img src="./frontend/img/{{$p->foto_product}}" class="card-img-top" alt="...">
+                    @else
+                    <img src="{{asset('/storage/'.$p->foto_product)}}" class="card-img-top" alt="...">
+                    {{-- <img src="storage/{{$p->foto_product}}" class="card-img-top" alt="..."> --}}
+                    @endif
                     <div class="card-body">
                         <h5 class="card-title">{{$p->nama_product}}</h5>
                         <p class="card-text">{{$p->user->name}}</p>
                         <div class=" container row justify-content-center">
-                            <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
+                            <a href="/product/{{$p->id}}" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
