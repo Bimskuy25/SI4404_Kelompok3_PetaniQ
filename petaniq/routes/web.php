@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,15 +41,17 @@ Route::post('/adminlogin', 'App\Http\Controllers\RoleController@AdminLogin');
 Route::get('/register', 'App\Http\Controllers\RoleController@showRegisterForm')->name('register');
 Route::post('/register', 'App\Http\Controllers\RoleController@register');
 
+Route::resource('/product', 'App\Http\Controllers\ProductController');
+
 // Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/belipanen', function () {
-    return view('belipanen');
-});
+// Route::get('/belipanen', function () {
+//     return view('belipanen');
+// });
 
 Route::get('/jualpanen', function () {
     return view('jualpanen');

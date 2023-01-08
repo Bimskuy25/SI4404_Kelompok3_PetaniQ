@@ -15,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        // dd(Product::all());
+        $product = Product::all();
+        return view('belipanen',compact('product'));
     }
 
     /**
@@ -25,7 +27,22 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $validatedData = $request->validate([
+            'nama_product' => 'required|max:2555',
+            'user_id' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status_pembayaran' => 'required',
+        ]);
+
+        $path = $request->gambar->store('gambar');
+        $validatedData['gambar'] = $path;
+
+        Product::create($validatedData);
+
+        // Redirect to home page or show success message
+        // return redirect()->route('login')->with('success', 'You have successfully registered');
     }
 
     /**

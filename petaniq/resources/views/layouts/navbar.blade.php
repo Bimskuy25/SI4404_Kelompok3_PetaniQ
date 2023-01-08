@@ -33,7 +33,7 @@
                                     <a class="nav-link" style="color: white;" href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/belipanen">Beli Hasil Panen</a>
+                                    <a class="nav-link" style="color: white;" href="/product">Beli Hasil Panen</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>

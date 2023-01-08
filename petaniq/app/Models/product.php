@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class product extends Model
 {
@@ -15,6 +16,11 @@ class product extends Model
      * @var array<int, string>
      */
     protected $guarded = [];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 
 
 }

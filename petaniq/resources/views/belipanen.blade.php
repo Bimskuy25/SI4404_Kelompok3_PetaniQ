@@ -1,24 +1,26 @@
 @extends('layouts.layout')
 
 @section('content')
-
+{{-- {{dd($product->all())}} --}}
 <section id="belipanan">
     <div class="container col-10 mb-5 mt-5">
         <h3 class="panen" style="color:#238E68; font-weight: bold;">Beli hasil panen</h3>
         <p class="panen">Beli Hasil Panen Yang Anda Minati</p>
         <div class="row row-cols-1 row-cols-md-4 mt-4 g-4">
+            @foreach($product as $p)
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="./frontend/img/rice.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Beras Enak</h5>
-                        <p class="card-text">Pak Ahmad</p>
+                        <h5 class="card-title">{{$p->nama_product}}</h5>
+                        <p class="card-text">{{$p->user->name}}</p>
                         <div class=" container row justify-content-center">
                             <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="./frontend/img/Tomat.jpg" class="card-img-top" alt="...">
