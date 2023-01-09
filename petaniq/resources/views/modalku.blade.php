@@ -24,7 +24,7 @@
                             </thead>
                                 <tbody>
                             @foreach($modalku as $modal)
-                                @if($modal->user_id == Auth::user()->id)
+                                @if($modal->user_id == Auth::user()->id || Auth::user()->kategori == 'admin')
                                     <tr>
                                         <th scope="row">{{$modal->id}}</th>
                                         <td>{{$modal->name}}</td>

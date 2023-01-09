@@ -14,7 +14,7 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-            <th scope="col">Number</th>
+
             <th scope="col">Id</th>
             <th scope="col">User_id</th>
             <th scope="col">Name</th>
@@ -31,9 +31,9 @@
 
           @foreach ($modalin as $m)
             <tr>
-                <td>{{ $loop->iteration }}</td>
+
                 <td>{{ $m->id }}</td>
-                <td>{{ $m->User_id }}</td>
+                <td>{{ $m->user_id }}</td>
                 <td>{{ $m->name }}</td>
                 <td>{{ $m->alamat }}</td>
                 <td>{{ $m->paket }}</td>

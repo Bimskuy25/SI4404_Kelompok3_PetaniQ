@@ -14,9 +14,9 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-            <th scope="col">Number</th>
             <th scope="col">ID</th>
             <th scope="col">Nama Produk</th>
+            <th scope="col">Harga</th>
             <th scope="col">Nama Pembeli</th>
             <th scope="col">Alamat</th>
             <th scope="col">Jumlah Pesanan</th>
@@ -30,9 +30,9 @@
 
           @foreach ($transaksi as $t)
             <tr>
-                <td>{{ $loop->iteration }}</td>
                 <th scope="row">{{$t->id}}</th>
                 <td>{{$t->product->nama_product}}</td>
+                <td>{{$t->product->harga}}</td>
                 <td>{{$t->user->name}}</td>
                 <td>{{$t->alamat}}</td>
                 <td>{{$t->jumlah_pesanan}}</td>
@@ -41,7 +41,7 @@
                 <td>{{$t->status}}</td>
                 <td>
                     {{-- <a href="/dashboard/vendors/{{ $vendor->slug }}" class="btn btn-info">Menu</a> --}}
-                    <a href="/dashboard/transaksi/{{ $t->id }}" class="btn btn-success btn-sm">See</a>
+                    {{-- <a href="/dashboard/transaksi/{{ $t->id }}" class="btn btn-success btn-sm">See</a> --}}
                     <a href="/dashboard/transaksi/{{ $t->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
                     <form action="/dashboard/transaksi/{{ $t->id }}" method="POST" class="d-inline">
                       @method('delete')

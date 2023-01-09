@@ -86,7 +86,7 @@ class DashboardUserController extends Controller
         $user = User::find($id);
         User::where('id',$user->id)->update($validatedData);
 
-        return redirect('dashboard/user')->with('success','Vendor has been updated!');
+        return redirect('dashboard/user')->with('success','User has been updated!');
     }
 
     /**
@@ -98,6 +98,6 @@ class DashboardUserController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('/dashboard/user')->with('success','Vendor has been deleted');
+        return redirect('/dashboard/user')->with('success','User has been deleted');
     }
 }

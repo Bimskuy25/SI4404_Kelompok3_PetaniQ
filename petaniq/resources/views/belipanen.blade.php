@@ -13,7 +13,7 @@
                     {{-- @if($p->id == '101' || $p->id == '102' || $p->id == '103')
                     <img src="./frontend/img/{{$p->foto_product}}" class="card-img-top" alt="...">
                     @else --}}
-                    <img src="{{asset('/storage/'.$p->foto_product)}}" class="card-img-top" alt="...">
+                    <img src="{{asset('/storage/'.$p->foto_product)}}" class="card-img-top" style="width: 285px; height: 172px" alt="...">
                     {{-- <img src="storage/{{$p->foto_product}}" class="card-img-top" alt="..."> --}}
                     {{-- @endif --}}
                     <div class="card-body">

@@ -9,7 +9,7 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-          <th scope="col">Number</th>
+
           <th scope="col">Id</th>
           <th scope="col">Nama</th>
           <th scope="col">email</th>
@@ -20,8 +20,7 @@
 
           @foreach ($user as $s)
             <tr>
-                <td>{{$loop->iteration}}</td>
-                <td>{{$s->id}}</td>
+                <th scope="row">{{$s->id}}</th>
                 <td>{{$s->name}}</td>
                 <td>{{$s->email}}</td>
                 <td>{{$s->phone}}</td>

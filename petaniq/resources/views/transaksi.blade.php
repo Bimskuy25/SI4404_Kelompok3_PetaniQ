@@ -26,7 +26,7 @@
                             </thead>
                             <tbody>
                             @foreach($transaction as $t)
-                                @if($t->user_id == Auth::user()->id)
+                                @if($t->user_id == Auth::user()->id || Auth::user()->kategori == 'admin')
                                     <tr>
                                         <th scope="row">{{$t->id}}</th>
                                         <td>{{$t->product->nama_product}}</td>
