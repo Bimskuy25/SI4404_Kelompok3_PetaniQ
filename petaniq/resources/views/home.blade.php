@@ -34,7 +34,7 @@
         {{-- About --}}
         <div class="container mb-5 page-section p-5">
             <div class="row justify-content-center">
-                <h1 id="about" class="text-center mt-5 mb-5">Tentang Kami</h1>
+                <h1 id="about" class="text-center mt-5 mb-5">Tentang Kami oke</h1>
                 <div class="col-10">
                     Petaniq merupakan platform yang membantu petani menjual hasil panen mereka secara online, serta membantu pembeli menemukan produk pertanian berkualitas dengan harga terbaik. Selain layanan jual beli hasil panen, Petaniq juga menyediakan jasa konsultasi yang akan membantu petani dan pembeli meningkatkan produktivitas dan efisiensi bisnis pertanian mereka. Petaniq menyediakan solusi terbaik bagi semua pihak yang terlibat dalam bisnis pertanian dengan memberikan kemudahan dalam bertransaksi, baik bagi petani yang ingin menjual hasil panen mereka maupun pembeli yang mencari produk pertanian berkualitas. Dengan Petaniq, petani dapat menjual hasil panen mereka kepada pembeli di seluruh Indonesia, sementara pembeli dapat membeli hasil panen dengan mudah dan cepat.                </div>
             </div>
