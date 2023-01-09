@@ -4,9 +4,9 @@
 
 <section id='form'>
     <div class="container col-9 mb-5 mt-5">
-        <h1 class="panen text-center mb-4" style="color:#238E68; font-weight: bold">Modal Tani</h1>
+        <h1 class="panen text-center mb-4" style="color:#238E68; font-weight: bold">Modal Mas Tani</h1>
         <div class="text-center mb-3">
-            <img src="./img/mastani.jpg" alt="">
+            <img src="./frontend/img/mastani.jpg" alt="">
         </div>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
