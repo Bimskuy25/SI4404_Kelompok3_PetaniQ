@@ -59,7 +59,9 @@ class DashboardModalinController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.modalin.edit',[
+            'modalin' => Modalin::find($id)
+        ]);
     }
 
     /**
@@ -71,7 +73,27 @@ class DashboardModalinController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //  dd($request->all());
+         $rules = [
+            'user_id' => 'required',
+            'name' => 'required',
+            'alamat' => 'required',
+            'paket' => 'required',
+            'jumlah_lahan' => 'required',
+            'tanggal' => 'required',
+            'foto_ktp' => 'required',
+            'status' => 'required',
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $path = $request->foto_ktp->store('gambar','public');
+        $validatedData['foto_ktp'] = $path;
+
+        $modalin = Modalin::find($id);
+        Modalin::where('id',$modalin->id)->update($validatedData);
+
+        return redirect('dashboard/modalin')->with('success','Modalin has been updated!');
     }
 
     /**
@@ -82,6 +104,7 @@ class DashboardModalinController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Modalin::destroy($id);
+        return redirect('/dashboard/modalin')->with('success','Modalin has been deleted');
     }
 }
