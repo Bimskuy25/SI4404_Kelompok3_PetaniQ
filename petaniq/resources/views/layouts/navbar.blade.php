@@ -22,7 +22,7 @@
                                     <a class="nav-link" style="color: white;" href="/modalin">Modalin</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/modalku">Modalku</a>
+                                    <a class="nav-link" style="color: white;" href="/modal">Modalku</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>

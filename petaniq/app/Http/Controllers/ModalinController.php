@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\modalin;
 use Illuminate\Http\Request;
+// use App\Models\product;
 
 class ModalinController extends Controller
 {
@@ -13,7 +14,8 @@ class ModalinController extends Controller
      */
     public function index()
     {
-        //
+        $modalku = Modalin::all();
+        return view('modalku',compact('modalku'));
     }
 
     /**
@@ -34,7 +36,27 @@ class ModalinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $validatedData = $request->validate([
+            'name' => 'required|max:2555',
+            'user_id' => 'required',
+            'alamat' => 'required',
+            'paket' => 'required',
+            'jumlah_lahan' => 'required',
+            'foto_ktp' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'tanggal' => 'required',
+            'status' => 'required',
+        ]);
+
+        $path = $request->foto_ktp->store('gambar','public');
+        $validatedData['foto_ktp'] = $path;
+
+        // dd($validatedData->all());
+
+        Modalin::create($validatedData);
+
+        // Redirect to home page or show success message
+        return redirect()->route('modal.index');
     }
 
     /**

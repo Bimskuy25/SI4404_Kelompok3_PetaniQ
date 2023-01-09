@@ -45,6 +45,8 @@ Route::resource('/product', 'App\Http\Controllers\ProductController');
 
 Route::resource('/transaction', 'App\Http\Controllers\TransactionController');
 
+Route::resource('/modal', 'App\Http\Controllers\ModalinController');
+
 // Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/dashboard', function () {
@@ -83,9 +85,9 @@ Route::get('/modaltani', function () {
     return view('modalintani');
 });
 
-Route::get('/modalku', function () {
-    return view('modalku');
-});
+// Route::get('/modalku', function () {
+//     return view('modalku');
+// });
 
 Route::get('/profile', function () {
     return view('profile');

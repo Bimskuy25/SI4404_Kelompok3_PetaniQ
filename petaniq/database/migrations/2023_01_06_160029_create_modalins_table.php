@@ -20,14 +20,13 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-
             $table->string('name');
             $table->string('alamat');
             $table->string('paket');
             $table->integer('jumlah_lahan');
             $table->date('tanggal');
             $table->string('foto_ktp');
-            $table->enum('status',['Success','Failed']);
+            $table->enum('status',['Success','Failed'])->default('Success');
         });
     }
 

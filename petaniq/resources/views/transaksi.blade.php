@@ -29,7 +29,6 @@
                                 @if($t->user_id == Auth::user()->id)
                                     <tr>
                                         <th scope="row">{{$t->id}}</th>
-                                        {{-- <td>{{$t->product_id}}</td> --}}
                                         <td>{{$t->product->nama_product}}</td>
                                         <td>{{$t->user->name}}</td>
                                         <td>{{$t->alamat}}</td>

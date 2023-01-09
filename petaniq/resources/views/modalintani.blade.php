@@ -9,26 +9,48 @@
             <img src="./img/tani.jpg" alt="">
         </div>
 
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/modal" method="post" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" class="form-control @error('paket') is-invalid @enderror" name="paket" value="Tani">
+                @error('paket') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
+            <input type="hidden" class="form-control @error('user_id') is-invalid @enderror" name="user_id" value="{{ auth()->user()->id }}">
+                @error('user_id') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
+                {{-- untuk status sementara --}}
+                <input type="hidden" class="form-control @error('status') is-invalid @enderror" name="status" value="Success">
+                    @error('status') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
             <div class="mb-3">
-                <label for="nama" class="form-label" style="font-weight:bold;">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap">
+                <label for="name" class="form-label" style="font-weight:bold;">Nama Lengkap</label>
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Masukkan Nama Lengkap">
+                @error('name') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
             </div>
+
             <div class="mb-3">
-                <label for="penjual" class="form-label" style="font-weight:bold;">Tanggal Lahir</label>
-                <input type="date" class="form-control" id="penjual" name="penjual" placeholder="Masukkan Nama Pemilik">
+                <label for="tanggal" class="form-label" style="font-weight:bold;">Tanggal Lahir</label>
+                <input type="date" class="form-control @error('tanggal') is-invalid @enderror" id="tanggal" name="tanggal" placeholder="Masukkan Nama Pemilik">
+                @error('tanggal') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
             </div>
             <div class="mb-3">
                 <label for="alamat" class="form-label" style="font-weight:bold;">Alamat</label>
-                <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat" rows="3"></textarea>
+                <textarea class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" placeholder="Masukkan Alamat" rows="3"></textarea>
+                @error('alamat') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
             </div>
+
             <div class="mb-3">
-                <label for="lahan" class="form-label" style="font-weight:bold;">Jumlah Lahan</label>
-                <input type="number" class="form-control" id="lahan" name="lahan" placeholder="Masukkan Nama Pemilik">
+                <label for="jumlah_lahan" class="form-label" style="font-weight:bold;">Jumlah Lahan (dalam meter persegi))</label>
+                <input type="number" class="form-control @error('jumlah_lahan') is-invalid @enderror" id="jumlah_lahan" name="jumlah_lahan" placeholder="Masukkan Jumlah Lahan">
+                @error('jumlah_lahan') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
             </div>
+
             <div class="mb-3">
                 <label for="gambar" class="form-label" style="font-weight:bold;">Foto KTP</label>
-                <input class="form-control" type="file" id="foto_ktp" name="foto_ktp">
+                <input class="form-control @error('foto_ktp') is-invalid @enderror" type="file" id="foto_ktp" name="foto_ktp">
+                @error('foto_ktp') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror
+
             </div>
             <div class="mt-4 text-center">
                 <input class="btn text-white btn-lg" type="submit" value="Tambahkan" style="background-color: #238E68;">

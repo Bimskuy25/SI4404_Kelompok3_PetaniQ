@@ -32,6 +32,19 @@
                                 <td>2</td>
                                 <td>Success</td>
                             </tr>
+                            @foreach($modalku as $modal)
+                                @if($modal->user_id == Auth::user()->id)
+                                    <tr>
+                                        <th scope="row">{{$modal->id}}</th>
+                                        <td>{{$modal->name}}</td>
+                                        <td>{{$modal->paket}}</td>
+                                        <td>{{$modal->tanggal}}</td>
+                                        <td>{{$modal->alamat}}</td>
+                                        <td>{{$modal->jumlah_lahan}}</td>
+                                        <td>{{$modal->status}}</td>
+                                    </tr>
+                                @endif
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
