@@ -31,24 +31,7 @@
             Modalin
           </a>
         </li>
-        {{-- <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="users"></span>
-            Customers
-          </a>
-        </li> --}}
-        {{-- <li class="nav-item">
-          <a class="nav-link  disabled" href="#">
-            <span data-feather="bar-chart-2"></span>
-            transaction
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">
-            <span data-feather="layers"></span>
-            Reports
-          </a>
-        </li> --}}
+
       </ul>
     </div>
   </nav>
