@@ -1,24 +1,30 @@
 @extends('layouts.layoutnonavbar')
 
 @section('content')
-
-<section class="vh-100">
-    <div class="container-fluid h-custom mt-5">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="./frontend/img/register.jpg"
-                class="img-fluid" alt="Sample image">
+      
+<section class="vh-100" style="background-image: url(./frontend/img/Banner.jpg); background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;">
+  <div class="container py-0 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="./frontend/img/registrasi.jpg"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 2rem;" />
             </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
 
-                <form method="POST" action='/register'>
-                    @csrf
+                <form method="POST" action="/register">
+                @csrf
                 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <h1 class="mb-3" style="color:#238E68">Register</h1>
+                  <h1 class="mb-2" style="color:#238E68">Register</h1>
                 </div>
 
                 <!-- Email input -->
-                <div class="form-outline mb-3">
+                <div class="form-outline mb-2">
                   <label class="form-label" for="form3Example3">Email address</label>
                   <input type="email" id="email" name="email" value="{{ old('email') }}"
                     class="form-control  @error('email') is-invalid @enderror"
@@ -31,7 +37,7 @@
                 </div>
 
                 <!-- Nama input -->
-                <div class="form-outline mb-3">
+                <div class="form-outline mb-2">
                   <label class="form-label" for="name">Nama</label>
                   <input type="name" id="name" name="name" value="{{ old('name') }}"
                     class="form-control  @error('name') is-invalid @enderror"
@@ -44,7 +50,7 @@
                 </div>
 
                 <!-- Nomor Handphone Input -->
-                <div class="form-outline mb-3">
+                <div class="form-outline mb-2">
                   <label class="form-label" for="phone">Nomor Handphone</label>
                   <input type="string" id="phone" name="phone" value="{{ old('phone') }}"
                     class="form-control  @error('phone') is-invalid @enderror "
@@ -57,7 +63,7 @@
                 </div>
 
                 <!-- Password -->
-                <div class="form-outline mb-3">
+                <div class="form-outline mb-2">
                   <label class="form-label" for="password">Password</label>
                   <input type="password" id="password" name="password"
                     required autocomplete="new-password"
@@ -68,7 +74,7 @@
                 </div>
 
                 <!-- Konfirmasi Password -->
-                <div class="form-outline mb-3">
+                <div class="form-outline mb-2">
                   <label class="form-label" for="passwordkonf">Konfirmasi Password</label>
                   <input type="password" id="passwordkonf" name="passwordkonf"
                     required autocomplete="new-password"
@@ -100,10 +106,14 @@
                 </div>
                   <p class="small fw-bold mt-2 pt-1 mb-0">Sudah Memiliki Akun? <a href="/login"
                       class="link-danger">Login</a></p>
-              </form>
+                </form>
 
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 @endsection
