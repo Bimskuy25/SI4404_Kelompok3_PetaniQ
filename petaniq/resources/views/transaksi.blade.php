@@ -49,7 +49,7 @@
     </div>
     {{-- Footer --}}
     <!-- footer -->
-    <footer class="bg-cover">
+    <footer class="bg-cover fixed-bottom">
         <div class="footer-top">
             <div class="container">
                 <div class="row gy-5">
