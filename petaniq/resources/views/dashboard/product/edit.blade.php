@@ -2,76 +2,66 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Vendors - Edit</h1>   
+    <h1 class="h2">Product - Edit</h1>
 </div>
 <div class="col-lg-8">
-  <form method="post" action="/dashboard/vendors/{{ $vendor->slug }}" enctype="multipart/form-data">
-    @method('put')
-    @csrf
-      <div class="mb-3">
-        <label for="name" class="form-label ">Name</label>
-        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" required autofocus value="{{ old('name',$vendor->name) }}">
-        @error('name')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
-      </div>
-      <div class="mb-3">
-        <label for="slug" class="form-label ">Slug</label>
-        <input type="text" class="form-control @error('slug') is-invalid @enderror" name="slug" id="slug" required value="{{ old('slug',$vendor->slug) }}">
-        @error('slug')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
-      </div>
-      <div class="mb-3">
-        <label for="founder" class="form-label ">Founder</label>
-        <input type="text" class="form-control @error('founder') is-invalid @enderror" id="founder" name="founder" required value="{{ old('founder',$vendor->founder) }}" >
-        @error('founder')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
-      </div>
-      
-      <div class="mb-3">
-          <label for="star" class="form-label ">Star</label>
-          <input type="text" class="form-control @error('star') is-invalid @enderror" id="star" name="star" required value="{{ old('star', $vendor->star)}}">
-          @error('star')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
+    <form method="post" action="/dashboard/product/{{$product->id }}" enctype="multipart/form-data">
+        @csrf
+        @method('put')
+          <div class="mb-3">
+            <input name="user_id" type="hidden" value="{{$product->user_id}}" class="form-control"  >
+            {{-- <input name="product_id" type="hidden" value="{{$transaksi->product_id}}" class="form-control"  > --}}
+            {{-- <input name="product_id" type="hidden" value="{{$transksi->product_id}}" class="form-control"  > --}}
+          </div>
+
+          <div class="mb-3">
+            <label for="nama_product" class="form-label">Nama Produk</label>
+            <input value="{{ old('nama_product',$product->nama_product) }}" name="nama_product" type="text" class="form-control">
+          </div>
+
+          <div class="form-outline mb-3">
+            <label class="form-label" for="kategori" style="font-weight:bold;">Pembayaran</label>
+            <select class="form-select" name="kategori" id="kategori" aria-label="Default select example">
+                <option selected>{{old('kategori',$product->kategori)}}</option>
+                <option value="Beras">Beras</option>
+                <option value="Sayur">Sayur</option>
+                <option value="Buah">Buah</option>
+            </select>
         </div>
 
+          <div class="mb-3">
+            <label for="harga" class="form-label" style="font-weight:bold;">Harga</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Rp</span>
+                <input type="number" class="form-control form-control-md" name="harga" id="harga" aria-describedby="basic-addon1" value="{{ old('harga',$product->harga) }}">
+            </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="deskripsi" class="form-label" style="font-weight:bold;">Deskripsi</label>
+                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" >{{$product->deskripsi}}</textarea>
+            </div>
 
         <div class="mb-3">
-          <label for="formFile" class="form-label">Foto Flyer</label>
-          <input type="hidden" name="oldImage" value="{{ $vendor->images }}">
-          @if ($vendor->image)
-          <img src="{{ asset('storage/'.$vendor->image) }}" class="img-preview img-fluid" src="" alt="">
+            <label for="oldImage" class="form-label" style="font-weight:bold;">Foto Produk</label>
+          <input type="hidden" name="oldImage" value="{{ $product->foto_product }}">
+          @if ($product->foto_product)
+          <img src="{{ asset('storage/'.$product->foto_product) }}" class="img-preview img-fluid" alt="">
           @else
           <img class="img-preview img-fluid mb-3 col-sm-5 d-block" src="" alt="">
           @endif
-          <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
-          @error('image')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
+          <input class="form-control @error('foto_product') is-invalid @enderror" type="file" id="image" name="foto_product" onchange="previewImage()">
+          @error('foto_product')
+        <div class="invalid-feedback"> {{ $message }} </div>
         @enderror
         </div>
 
 
-        <div class="mb-3">
-          <label for="desription" class="form-label ">description</label>
-          <input type="hidden" name="description" id="description" class="@error('description') is-invalid @enderror" required value="{{ old('description',$vendor->description) }}" >
-          <trix-editor input="description"></trix-editor>
-        </div>
-      <button type="submit" class="btn btn-primary">Update Vendor</button>
+
+      <button type="submit" class="btn btn-primary">Update Product</button>
     </form>
 </div>
+
 
 <script>
   const name = document.querySelector('#name');
@@ -80,7 +70,7 @@
   name.addEventListener('change',function(){
     fetch('/dashboard/vendors/checkSlug?name=' + name.value)
       .then(response => response.json())
-      .then(data => slug.value = data.slug) 
+      .then(data => slug.value = data.slug)
   });
 
   document.addEventListener('trix-file-accept',function(e){

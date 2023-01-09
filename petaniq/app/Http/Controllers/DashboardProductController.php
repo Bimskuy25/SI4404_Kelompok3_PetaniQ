@@ -59,7 +59,9 @@ class DashboardProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.product.edit',[
+            'product' => Product::find($id)
+        ]);
     }
 
     /**
@@ -71,7 +73,24 @@ class DashboardProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->all());
+        $rules = [
+            'user_id' => 'required',
+            'nama_product' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $path = $request->foto_product->store('gambar','public');
+        $validatedData['foto_product'] = $path;
+
+        $product = Product::find($id);
+        Product::where('id',$product->id)->update($validatedData);
+
+        return redirect('dashboard/product')->with('success','Product has been updated!');
     }
 
     /**
@@ -82,6 +101,7 @@ class DashboardProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Transaction::destroy($id);
+        return redirect('/dashboard/product')->with('success','Product has been deleted');
     }
 }

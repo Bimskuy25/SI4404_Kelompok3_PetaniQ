@@ -39,11 +39,12 @@
                 <td>{{ $m->paket }}</td>
                 <td>{{ $m->jumlah_lahan }}</td>
                 <td>{{ $m->tanggal }}</td>
-                <td>{{ $m->foto_ktp }}</td>
+                {{-- <td>{{ $m->foto_ktp }}</td> --}}
+                <td><img src="{{asset('/storage/'.$m->foto_ktp)}}" class="card-img-top" style="width: 285px; height: 172px" alt="..."></td>
                 <td>{{ $m->status }}</td>
                 <td>
                     {{-- <a href="/dashboard/vendors/{{ $vendor->slug }}" class="btn btn-info">Menu</a> --}}
-                    <a href="/dashboard/modalin/{{ $m->id }}" class="btn btn-success btn-sm">See</a>
+                    <a href="{{asset('/storage/'.$m->foto_ktp)}}" class="btn btn-success btn-sm">See</a>
                     <a href="/dashboard/modalin/{{ $m->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
                     <form action="/dashboard/modalin/{{ $m->id }}" method="POST" class="d-inline">
                       @method('delete')

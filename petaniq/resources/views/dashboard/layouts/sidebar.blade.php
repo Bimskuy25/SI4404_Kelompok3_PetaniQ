@@ -16,7 +16,7 @@
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/modalin*') ? 'active': '' }}" href="/dashboard/product">
             <span data-feather="file"></span>
-            Products
+            Produk
           </a>
         </li>
         <li class="nav-item">

@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Products</h1>
+    <h1 class="h2">Produk</h1>
 </div>
 @if(session()->has('success'))
 <div class="alert alert-success col-lg-8" role="alert">
@@ -34,10 +34,11 @@
                 <td>{{ $p->kategori }}</td>
                 <td>{{ $p->harga }}</td>
                 <td>{{ $p->deskripsi }}</td>
-                <td>{{ $p->foto_product }}</td>
+                {{-- <td>{{ $p->foto_product }}</td> --}}
+                <td><img src="{{asset('/storage/'.$p->foto_product)}}" class="card-img-top" style="width: 285px; height: 172px" alt="..."></td>
                 <td>
                     {{-- <a href="/dashboard/vendors/{{ $vendor->slug }}" class="btn btn-info">Menu</a> --}}
-                    <a href="/dashboard/product/{{ $p->id }}" class="btn btn-success btn-sm">See</a>
+                    <a href="{{asset('/storage/'.$p->foto_product)}}" class="btn btn-success btn-sm">See</a>
                     <a href="/dashboard/product/{{ $p->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
                     <form action="/dashboard/product/{{ $p->id }}" method="POST" class="d-inline">
                       @method('delete')

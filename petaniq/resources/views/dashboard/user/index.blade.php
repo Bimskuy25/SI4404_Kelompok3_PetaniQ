@@ -12,6 +12,7 @@
 
           <th scope="col">Id</th>
           <th scope="col">Nama</th>
+          <th scope="col">Kategori</th>
           <th scope="col">email</th>
           <th scope="col">phone</th>
         </tr>
@@ -22,6 +23,7 @@
             <tr>
                 <th scope="row">{{$s->id}}</th>
                 <td>{{$s->name}}</td>
+                <td>{{$s->kategori}}</td>
                 <td>{{$s->email}}</td>
                 <td>{{$s->phone}}</td>
                 <td>
