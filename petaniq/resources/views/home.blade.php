@@ -195,8 +195,8 @@
                     </div>
                     <div class="col-lg-3">
                         <h6 class="text-white mb-4">JAM KERJA</h6>
-                        <p class="mb-1">Monday-Friday : 08:00 - 22:00</p>
-                        <p>Sturday-Sunday : 08:00 - 23:00</p>
+                        <p class="mb-1">Senin - Kamis : 08:00 - 22:00</p>
+                        <p>Jum'at - Sabtu : 08:00 - 20:00</p>
                     </div>
                 </div>
             </div>

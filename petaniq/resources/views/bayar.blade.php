@@ -58,9 +58,43 @@
 </section>
 
 {{-- Footer --}}
-<div class="text-center p-3 text-light" style="background-color: #238E68;">
-    © Copyright 2022 PetaniQ
-    <br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, habitant aliquet proin id volutpat. Est suscipit augue donec laoreet nibh odio volutpat quam.
-</div>
+    <!-- footer -->
+    <footer class="bg-cover">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <img src="./frontend/img/Logo23.png" class="mb-4" alt="">
+                        <div class="social-links">
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ms-auto">
+                        <h6 class="text-white mb-4">KONTAK</h6>
+                        <p class="mb-1">Call us : (03) 9283 4726</p>
+                        <p class="mb-1">Email : PetaniQ@gmail.com</p>
+                        <p class="mb-0">Address : Jl. Tlogowono, Bono, Kec. Tulung, Kabupaten Klaten, Jawa Tengah</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-white mb-4">JAM KERJA</h6>
+                        <p class="mb-1">Senin - Kamis : 08:00 - 22:00</p>
+                        <p>Jum'at - Sabtu : 08:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row gy-3 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">Copyrights all rights reserved</p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="mb-0">Created By PetaniQ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 @endsection
