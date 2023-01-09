@@ -10,12 +10,12 @@
             @foreach($product as $p)
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    @if($p->id == '101' || $p->id == '102' || $p->id == '103')
+                    {{-- @if($p->id == '101' || $p->id == '102' || $p->id == '103')
                     <img src="./frontend/img/{{$p->foto_product}}" class="card-img-top" alt="...">
-                    @else
+                    @else --}}
                     <img src="{{asset('/storage/'.$p->foto_product)}}" class="card-img-top" alt="...">
                     {{-- <img src="storage/{{$p->foto_product}}" class="card-img-top" alt="..."> --}}
-                    @endif
+                    {{-- @endif --}}
                     <div class="card-body">
                         <h5 class="card-title">{{$p->nama_product}}</h5>
                         <p class="card-text">{{$p->user->name}}</p>
@@ -26,54 +26,6 @@
                 </div>
             </div>
             @endforeach
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./frontend/img/Tomat.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Tomat Segar</h5>
-                        <p class="card-text">Pak Slamet</p>
-                        <div class=" container row justify-content-center">
-                            <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./frontend/img/Semangka.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Semangka Klaten</h5>
-                        <p class="card-text">Pak Broto</p>
-                        <div class=" container row justify-content-center">
-                            <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./frontend/img/rice.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Beras Enak</h5>
-                        <p class="card-text">Ibu Ratmini</p>
-                        <div class=" container row justify-content-center">
-                            <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="./frontend/img/rice.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Beras Enak</h5>
-                        <p class="card-text">Pak Broto</p>
-                        <div class=" container row justify-content-center">
-                            <a href="detail" class="btn text-white" style="background-color: #238E68;">Lihat Produk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <div class="text-center p-3 text-light" style="background-color: #238E68;">

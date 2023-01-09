@@ -25,8 +25,9 @@ return new class extends Migration
             //lain lain
             $table->integer('total_harga');
             $table->integer('jumlah_pesanan');
-            $table->enum('status',['Success','Failed']);
-            $table->enum('pembayaran',['Gopay','Debit','Ovo']);
+            $table->text('alamat');
+            $table->enum('status',['Success','Failed','Checking'])->default('Checking');
+            $table->enum('pembayaran',['Gopay','Debit','Ovo','Dana']);
         });
     }
 

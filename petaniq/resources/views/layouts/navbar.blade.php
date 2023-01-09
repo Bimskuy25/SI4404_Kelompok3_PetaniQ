@@ -36,7 +36,7 @@
                                     <a class="nav-link" style="color: white;" href="/product">Beli Hasil Panen</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/transaksi">Transaksi</a>
+                                    <a class="nav-link" style="color: white;" href="/transaction">Transaksi</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>

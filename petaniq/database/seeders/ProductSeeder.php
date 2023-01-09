@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
             'nama_product' => 'Beras Enak',
             'harga' => 15600,
             'deskripsi' => 'Beras unggul kami juga memiliki nilai gizi yang tinggi, sehingga cocok untuk anda yang ingin menjaga kesehatan keluarga anda. Jangan ragu untuk membeli beras unggul kami sekarang juga!',
-            'foto_product' => 'rice.jpg',
+            'foto_product' => 'gambar/rice.jpg',
             'kategori' => 'Beras',
         ]);
         Product::create([
@@ -30,7 +30,7 @@ class ProductSeeder extends Seeder
             'nama_product' => 'Tomat Segar',
             'harga' => 12300,
             'deskripsi' => 'Tomat segar kami juga memiliki nilai gizi yang tinggi, kaya akan vitamin C dan potassium. Jangan ragu untuk membeli tomat segar kami sekarang juga untuk menjaga kesehatan anda dan keluarga anda!',
-            'foto_product' => 'Tomat.jpg',
+            'foto_product' => 'gambar/Tomat.jpg',
             'kategori' => 'Sayur',
         ]);
         Product::create([
@@ -39,7 +39,7 @@ class ProductSeeder extends Seeder
             'nama_product' => 'Semangka Klaten',
             'harga' => 13400,
             'deskripsi' => 'Tomat segar kami juga memiliki nilai gizi yang tinggi, kaya akan vitamin C dan potassium. Jangan ragu untuk membeli tomat segar kami sekarang juga untuk menjaga kesehatan anda dan keluarga anda!',
-            'foto_product' => 'Semangka.jpg',
+            'foto_product' => 'gambar/Semangka.jpg',
             'kategori' => 'Buah',
         ]);
     }

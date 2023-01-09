@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\transaction;
 use App\Http\Requests\StoretransactionRequest;
 use App\Http\Requests\UpdatetransactionRequest;
+use App\Models\product;
 
 class TransactionController extends Controller
 {
@@ -15,7 +16,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return view('transaksi');
+        $transaction = Transaction::all();
+        return view('transaksi',compact('transaction'));
     }
 
     /**
@@ -25,7 +27,8 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        return view('bayar');
+
+        // return view('bayar');
     }
 
     /**
@@ -37,19 +40,19 @@ class TransactionController extends Controller
     public function store(StoretransactionRequest $request)
     {
         $validatedData = $request->validate([
-            'nama_product' => 'required|max:2555',
             'user_id' => 'required',
             'product_id' => 'required',
             'jumlah_pesanan' => 'required',
+            'alamat' => 'required',
+            'pembayaran' => 'required',
         ]);
 
-        $path = $request->foto_product->store('gambar','public');
-        $validatedData['foto_product'] = $path;
+        $validatedData['total_harga'] = $request->jumlah_pesanan * Product::find($request->product_id)->harga;
 
-        Product::create($validatedData);
+        Transaction::create($validatedData);
 
         // Redirect to home page or show success message
-        return redirect()->route('product.create');
+        return redirect()->route('transaction.index');
     }
 
     /**

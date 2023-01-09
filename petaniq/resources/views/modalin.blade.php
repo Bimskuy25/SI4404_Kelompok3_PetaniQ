@@ -24,7 +24,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <a href="modaltani.html" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
+                            <a href="/modaltani" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <a href="modalmastani.html" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
+                            <a href="/modalmastani" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                             </ul>
                         </div>
                         <div class="card">
-                            <a href="modalpaktani.html" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
+                            <a href="/modalpaktani" class="btn text-white" style="background-color: #238E68;">Pilih Paket</a>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row g-2">
                     <div class="col">
-                        <img src="./img/rice.jpg" alt="...">
+                        <img src="{{asset('/storage/'.$p->foto_product)}}" alt="...">
                     </div>
                     <div class="col">
                         <form action="" enctype="multipart/form-data">
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="form-outline mb-3">
-                                <label class="form-label" for="jenis-mobil" style="font-weight:bold;">Prmbayaran</label>
+                                <label class="form-label" for="jenis-mobil" style="font-weight:bold;">Pembayaran</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Pembayaran</option>
                                     <option value="gopay">Gopay</option>

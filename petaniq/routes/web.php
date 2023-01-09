@@ -67,9 +67,9 @@ Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
 
-Route::get('/transaksi', function () {
-    return view('transaksi');
-});
+// Route::get('/transaksi', function () {
+    // return view('transaksi');
+// });
 
 Route::get('/modalmastani', function () {
     return view('modalinmastani');

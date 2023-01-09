@@ -15,4 +15,13 @@ class transaction extends Model
      * @var array<int, string>
      */
     protected $guarded = [];
+    public function product()
+    {
+        return $this->belongsTo('App\Models\product');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -22,5 +22,8 @@ class product extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-
+    public function transaksi()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
