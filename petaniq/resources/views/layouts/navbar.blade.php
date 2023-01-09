@@ -11,10 +11,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         @if (Auth::check())
-                            @if(Auth::user()->kategori == 'petani')
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/">Home</a>
-                                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="/">Home</a>
+                        </li>
+                            @if(Auth::user()->kategori == 'petani' || Auth::user()->kategori == 'admin' )
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/product/create">Jual Hasil Panen</a>
                                 </li>
@@ -24,26 +24,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/modal">Modalku</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
-                                </li>
                             @endif
-                            @if(Auth::user()->kategori == 'pembeli')
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/">Home</a>
-                                </li>
+                            @if(Auth::user()->kategori == 'pembeli' || Auth::user()->kategori == 'admin')
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/product">Beli Hasil Panen</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" style="color: white;" href="/transaction">Transaksi</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
-                                </li>
                             @endif
-
-
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: white;" href="/konsultasi">Konsultasikan</a>
+                            </li>
                         @else
                         <li class="nav-item">
                             <a class="nav-link" style="color: white;" href="/">Home</a>
@@ -64,6 +56,9 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                @if(Auth::user()->kategori == 'admin')
+                                <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                                @endif
                                 {{-- <li><a class="dropdown-item" href="/logout">Logout</a></li> --}}
                                 <li><form method="POST" action="{{ route('logout')}}" >@csrf <button class="btn btn-light dropdown-item" type="submit">Logout</button></form></li>
                             </ul>

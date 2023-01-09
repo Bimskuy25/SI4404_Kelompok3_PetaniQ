@@ -23,15 +23,6 @@
                             </tr>
                             </thead>
                                 <tbody>
-                            <tr>
-                                <th scope="row">1234</th>
-                                <td>Maman Rusdi</td>
-                                <td>Tani</td>
-                                <td>15/12/1990</td>
-                                <td>jl.braga...</td>
-                                <td>2</td>
-                                <td>Success</td>
-                            </tr>
                             @foreach($modalku as $modal)
                                 @if($modal->user_id == Auth::user()->id)
                                     <tr>

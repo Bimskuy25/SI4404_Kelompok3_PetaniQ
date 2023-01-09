@@ -47,6 +47,11 @@ Route::resource('/transaction', 'App\Http\Controllers\TransactionController');
 
 Route::resource('/modal', 'App\Http\Controllers\ModalinController');
 
+Route::resource('/dashboard/user', 'App\Http\Controllers\DashboardUserController');
+Route::resource('/dashboard/product', 'App\Http\Controllers\DashboardProductController');
+Route::resource('/dashboard/transaksi', 'App\Http\Controllers\DashboardTransactionController');
+Route::resource('/dashboard/modalin', 'App\Http\Controllers\DashboardModalinController');
+
 // Route::post('/login', 'Auth\LoginController@login');
 
 Route::get('/dashboard', function () {

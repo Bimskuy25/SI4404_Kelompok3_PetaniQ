@@ -52,7 +52,6 @@ class RoleController extends Controller
     public function AdminLogin(Request $request)
     {
         // dd($request->session());
-
         $this->validate($request, [
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
